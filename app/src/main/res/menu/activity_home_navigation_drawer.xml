@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/general">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menuBeranda"
+                    android:icon="@drawable/ic_round_home_24"
+                    android:title="@string/home" />
+                <item
+                    android:id="@+id/menuKonsultasi"
+                    android:icon="@drawable/ic_round_question_answer_24"
+                    android:title="@string/consultation" />
+                <item
+                    android:id="@+id/menuMonitoring"
+                    android:icon="@drawable/ic_round_trending_up_24"
+                    android:title="@string/monitoring" />
+                <item
+                    android:id="@+id/menuPasar"
+                    android:icon="@drawable/ic_round_store_24"
+                    android:title="@string/market" />
+                <item
+                    android:id="@+id/menuCuaca"
+                    android:icon="@drawable/ic_baseline_cloud_24"
+                    android:title="@string/weather" />
+                <!--
+                     <item
+                            android:id="@+id/nav_gallery"
+                            android:icon="@drawable/ic_menu_gallery"
+                            androidle="Log OUT" />
+
+                        <item
+                            android:id="@+id/nav_slideshow"
+                            android:icon="@drawable/ic_menu_slideshow"
+                            android:title="Slideshow" />
+                        <item
+                            android:id="@+id/nav_manage"
+                            android:icon="@drawable/ic_menu_manage"
+                            android:title="Tools" />
+                  -->
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/account_and_profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menuProfil"
+                    android:icon="@drawable/ic_round_account_box_24"
+                    android:title="@string/my_profile" />
+                <item
+                    android:id="@+id/menuKeluar"
+                    android:icon="@drawable/ic_round_logout_24"
+                    android:title="@string/btn_logout" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- FOR ACCOUNT LOGOUTS
+    <item android:title="Account settings">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:title="Log Out"
+                android:icon="@drawable/ic_action_log_out" />
+
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+    -->
+
+</menu>

@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">Agrodeo</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="attrImg">ImageView Header</string>
+    <string name="home_success">ImageView Login Success</string>
+    <string name="success">Success</string>
+
+    <string name="tab_text_1">Cloud</string>
+    <string name="tab_text_2">Person</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+
+    <!-- TODO: Signin with Google strings -->
+    <string name="signed_out">Signed Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="signed_in_fmt">Signed In</string>
+    <string name="google_sign_in">MASUK DENGAN AKUN</string>
+    <string name="default_server_client_id">375118482388-efblntnd0l2liqj0935hgr3tv2eogc4v.apps.googleusercontent.com</string>
+
+    <!-- PMMB PTPR -->
+    <string name="pilih_ruangan">Pilih Ruangan</string>
+    <string name="pilih_unit">Pilih Unit</string>
+
+    <string name="name">Nama</string>
+    <string name="role">Fungsi</string>
+    <string name="commodity">Komoditas</string>
+    <string name="location">Lokasi</string>
+    <string name="birthdate">Tanggal Lahir</string>
+    <string name="sex">Jenis Kelamin</string>
+    <string name="education">Pendidikan</string>
+    <string name="email">Alamat Email</string>
+    <string name="phone">Nomor Telepon</string>
+    <!-- <string name="religion">Agama</string> -->
+
+    <string name="input_name">Masukkan nama anda di sini</string>
+    <string name="input_role">Masukkan fungsi anda di sini</string>
+    <string name="input_commodity">Masukkan komoditas anda di sini</string>
+    <string name="input_location">Masukkan lokasi anda di sini</string>
+    <string name="input_birthdate">Ketuk pada isian ini untuk memilih</string>
+    <string name="inputted_birthdate">%1$d-%2$d-%3$d</string>
+    <string name="input_sex">Masukkan jenis kelamin anda di sini</string>
+    <string name="input_education">Masukkan pendidikan anda di sini</string>
+    <string name="input_email">Masukkan alamat email anda di sini</string>
+    <string name="input_phone">Masukkan nomor telepon anda di sini</string>
+    <string name="input_title_article">Judul artikel</string>
+    <string name="input_content_article">Konten artikel</string>
+    <!-- <string name="input_religion">Masukkan agama anda di sini</string> -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="key_birthdate">key_birthdate</string>
+    <string name="key_education">key_education</string>
+    <string name="key_commodity">key_commodity</string>
+    <string name="key_location">key_location</string>
+    <string name="key_name">key_name</string>
+    <string name="key_phone">key_phone</string>
+    <!-- <string name="key_religion">key_religion</string> -->
+    <string name="key_role">key_role</string>
+    <string name="key_sex">key_sex</string>
+    <string name="key_admin">key_admin</string>
+    <string name="key_seller">key_seller</string>
+    <string name="saved_default_key">saved_default_key</string>
+
+    <!-- TODO: FirstOpenActivity -->
+    <string name="paragraph_first_open">Keyakinan untuk memberdayakan petani merupakan sebuah anugerah</string>
+
+    <!-- TODO: DrawerMenu strings -->
+    <string name="my_profile">Profil Saya</string>
+    <string name="profile">Profil</string>
+    <string name="consultation">Konsultasi</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="market">Pasar</string>
+    <string name="weather">Cuaca</string>
+    <string name="get_in">Masuk</string>
+    <string name="btn_logout">Keluar</string>
+    <string name="account_and_profile">Akun dan Profil</string>
+    <string name="home">Beranda</string>
+    <string name="general">Menu Utama</string>
+    <string name="welcome_messages">Selamat Datang, %1$s!</string>
+    <string name="welcome_messages_register">Selamat Datang!</string>
+
+    <!-- TODO: UploadMarketActivity and UploadArticleActivity strings -->
+    <string name="pick_an_image">Pilih Gambar</string>
+    <string name="upload_article">Unggah artikel</string>
+    <string name="article_1">For example, in the color red, the color code is #FF0000, which is \'255\' red, \'0\' green, and \'0\' blue. These color codes can change the color of the background, text, and tables on a web page.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fab">FloatingActionButton</string>
+    <string name="article_empty">Artikel masih kosong nih…</string>
+    <string name="market_empty">Pasar masih kosong nih…</string>
+    <string name="product_name_sample">Wortel Jenis A</string>
+    <string name="product_price_sample">Rp20.000,00</string>
+
+    <string name="register_new_account">Daftar Akun Baru</string>
+    <string name="register_message_more">Silakan isi data diri terlebih dahulu untuk membuka beragam fitur di Agrodeo</string>
+
+    <string name="market_product_name">Nama produk yang akan dijual</string>
+    <string name="market_product_price">Harga produk yang akan dijual (Rp)</string>
+    <string name="market_product_weight">Berat produk yang akan dijual (gr)</string>
+    <string name="market_product_location">Lokasi produk tempat Penjual</string>
+    <string name="market_contact_number">Nomor Penjual yang dapat dihubungi</string>
+    <string name="upload_market">Unggah produk</string>
+    <string name="register_product_market">Pasang Produk</string>
+    <string name="register_product_market_more">Silakan pasang produk yang akan anda jual di sini!</string>
+    <string name="tv_market_product_name">Nama Produk</string>
+    <string name="tv_market_product_weight">Berat Produk</string>
+    <string name="tv_market_product_price">Harga Produk</string>
+    <string name="tv_market_product_location">Lokasi Produk</string>
+    <string name="tv_market_contact_number">Nomor telepon Penjual</string>
+    <string name="product_detail">Detail Produk</string>
+    <string name="tv_product_price_detail">Rp%1$d,00</string>
+    <string name="tv_product_weight_detail">%1$d (gr)</string>
+    <string name="edit_product_market">Ubah Produk</string>
+    <string name="edit_product_market_more">Ubah Produk yang telah anda jual di sini!</string>
+    <string name="select_device">Pilih Perangkat Bluetooth</string>
+    <string name="register_article">Buat Artikel</string>
+    <string name="et_input_content_article">Masukkan konten artikel anda</string>
+    <string name="et_input_title_article">Masukkan judul artikel anda</string>
+    <string name="edit_article">Ubah Artikel</string>
+    <string name="edit_article_more">Ubah artikel anda di sini</string>
+    <string name="register_article_more">Buat artikel mengenai serba serbi dunia pertanian di sini!</string>
+    <string name="article_detail">Detail Artikel</string>
+    <string name="min_temperature_icon">Min Temperature Icon</string>
+    <string name="humidity_icon">Humidity Icon</string>
+    <string name="sunrise_icon">Sunrise Icon</string>
+    <string name="sunset_icon">Sunset Icon</string>
+
+    <string-array name="sex_array">
+        <item>Pilih jenis kelamin</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <string-array name="education_array">
+        <item>Pilih tingkat pendidikan</item>
+        <item>SD</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>D3</item>
+        <item>S1/D4</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+</resources>

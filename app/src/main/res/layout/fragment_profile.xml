@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_top_bottom_constraint_layout_2"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" /> -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:layout_marginVertical="@dimen/margin_top_bottom_constraint_layout_1"
+                android:elevation="12dp"
+                android:padding="12dp"
+                android:orientation="vertical"><!-- android:background="@drawable/content_box" -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="250dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_account_circle_24"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="@string/account_and_profile" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                    android:layout_marginEnd="@dimen/margin_start_end_constraint_layout_1"
+                    android:layout_marginTop="@dimen/margin_top_bottom_constraint_layout" -->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="7"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Steven Joseph Ryhadi"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="24dp"
+                        tools:ignore="SpUsage" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top_bottom_constraint_layout_1"
+                        android:layout_marginBottom="@dimen/margin_top_bottom_constraint_layout_2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="18dp"
+                            app:cardBackgroundColor="@color/white">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_round_eco_24"
+                                    android:scaleType="centerCrop"
+                                    android:contentDescription="@string/account_and_profile" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_eco_24" /> -->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRole2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_top_bottom_between_constraint_layout_1"
+                            android:ems="9"
+                            android:textAllCaps="true"
+                            android:text="Petani di mana gitu"
+                            android:textColor="?attr/colorOnBackground"
+                            android:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_top_bottom_constraint_layout_2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="18dp"
+                            app:cardBackgroundColor="@color/white">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_round_assignment_ind_24"
+                                    android:scaleType="centerCrop"
+                                    android:contentDescription="@string/account_and_profile" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_assignment_ind_24" /> -->
+
+                        <TextView
+                            android:id="@+id/tvCommodity2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_top_bottom_between_constraint_layout_1"
+                            android:ems="9"
+                            android:textAllCaps="true"
+                            android:text="Komunitas Masyarakat Sehat Bahagia"
+                            android:textColor="?attr/colorOnBackground"
+                            android:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="18dp"
+                            app:cardBackgroundColor="@color/white">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_round_person_pin_circle_24"
+                                    android:scaleType="centerCrop"
+                                    android:contentDescription="@string/account_and_profile" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_round_person_pin_circle_24" /> -->
+
+                        <TextView
+                            android:id="@+id/tvLocation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_top_bottom_between_constraint_layout_1"
+                            android:ems="9"
+                            android:textAllCaps="true"
+                            android:text="Di Hatimu"
+                            android:textColor="?attr/colorOnBackground"
+                            android:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/content_box"
+            android:elevation="12dp"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:layout_marginVertical="@dimen/margin_top_bottom_constraint_layout_1"
+                android:elevation="12dp"
+                android:padding="12dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPersonalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_top_bottom_constraint_layout_1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Data Pribadi"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="24dp"
+                    tools:ignore="SpUsage" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:text="Tanggal Lahir"
+                        android:textColor="?attr/colorOnBackground"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBirthdate2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                        android:layout_gravity="end"
+                        android:text="1983-08-03"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:ems="11"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:text="Jenis Kelamin"
+                        android:textColor="?attr/colorOnBackground"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSex2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                        android:layout_gravity="end"
+                        android:text="Laki-laki"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:ems="11"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendidikan"
+                        android:textColor="?attr/colorOnBackground"
+                        android:ems="5"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAcademic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                        android:layout_gravity="end"
+                        android:text="S3"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:ems="11"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
+                <!--
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agama"
+                            android:textColor="?attr/colorOnBackground"
+                            android:ems="5"
+                            android:fontFamily="@font/poppins_semibold"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvReligion2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                            android:layout_gravity="end"
+                            android:text="Kristen"
+                            android:textColor="?attr/colorPrimaryDark"
+                            android:ems="11"
+                            android:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout> -->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Email"
+                        android:textColor="?attr/colorOnBackground"
+                        android:ems="5"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEmail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                        android:text="steve.jo.lb3@gmail.com"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:ems="11"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No. Handphone"
+                        android:textColor="?attr/colorOnBackground"
+                        android:ems="5"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPhone2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1"
+                        android:layout_gravity="end"
+                        android:text="081234567890"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:ems="11"
+                        android:fontFamily="@font/poppins_medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

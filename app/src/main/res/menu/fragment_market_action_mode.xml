@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuHapus"
+        android:icon="@drawable/ic_round_home_24"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuUbah"
+        android:icon="@drawable/ic_round_question_answer_24"
+        android:title="@string/consultation"
+        app:showAsAction="ifRoom" />
+</menu>

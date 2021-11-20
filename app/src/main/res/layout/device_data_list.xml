@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:foregroundGravity="center"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardBackgroundColor="?attr/colorPrimary"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="0dp"
+        android:padding="20dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDeviceInfo"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_constraint_layout_1">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Article 1"
+                android:ems="7"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="22dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDeviceInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article_1"
+                android:justificationMode="inter_word"
+                android:textColor="?attr/colorOnPrimary"
+                android:ems="9"
+                android:fontFamily="@font/poppins_medium"
+                card_view:targetApi="o" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDeviceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article_1"
+                android:justificationMode="inter_word"
+                android:textColor="?attr/colorOnPrimary"
+                android:ems="9"
+                android:fontFamily="@font/poppins_medium"
+                card_view:targetApi="o" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

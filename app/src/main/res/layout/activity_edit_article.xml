@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditArticleActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.Agrodeo.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorOnPrimary"
+            app:titleTextAppearance="@style/Theme.Agrodeo.Poppins"
+            app:subtitleTextAppearance="@style/Theme.Agrodeo.PoppinsLight"
+            app:titleTextColor="?attr/colorOnBackground"
+            app:subtitleTextColor="?attr/colorOnBackground" />
+        <!-- app:popupTheme="@style/Theme.Agrodeo.PopUpOverlay" -->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_top_bottom_constraint_layout_2">
+
+            <TextView
+                android:id="@+id/tvWelcomeRegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginVertical="150dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/edit_article"
+                android:textSize="36sp"/>
+
+            <TextView
+                android:id="@+id/tvRegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcomeRegisterTitle"
+                android:layout_marginVertical="@dimen/margin_top_bottom_between_constraint_layout_1"
+                android:gravity="center"
+                android:ems="10"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/edit_article_more"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/image_show_market"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvRegisterTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="8dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/edit_article_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="fitXY"
+                        android:elevation="5dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                    android:text="@string/pick_an_image"
+                    android:textStyle="bold"
+                    android:elevation="5dp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/article_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/image_show_market"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:layout_marginTop="@dimen/margin_top_bottom_constraint_layout"
+                android:layout_marginBottom="@dimen/margin_top_bottom_constraint_layout_2"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_top_bottom_constraint_layout_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@drawable/content_box"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:text="@string/input_title_article"
+                        android:textColor="@android:color/white" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_start_end_constraint_layout_2"
+                        style="@style/Widget.Design.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_article_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ems="18"
+                            android:hint="@string/et_input_title_article"
+                            android:inputType="textPersonName"
+                            android:lines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/article_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/article_title_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:layout_marginVertical="@dimen/margin_top_bottom_between_constraint_layout_1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_top_bottom_constraint_layout_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:ems="5"
+                        android:text="@string/input_content_article"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/content_box"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_start_end_constraint_layout_2"
+                        style="@style/Widget.Design.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_article_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:scrollbars="vertical"
+                            android:minLines="7"
+                            android:textAlignment="textStart"
+                            android:hint="@string/et_input_content_article"
+                            android:inputType="textMultiLine" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/article_content_layout"
+                android:layout_marginHorizontal="@dimen/margin_top_bottom_constraint_layout_2"
+                android:layout_marginVertical="@dimen/margin_start_end_constraint_layout_1"
+                android:text="@string/upload_article" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

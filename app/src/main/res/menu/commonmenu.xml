@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item-->
+<!--        android:id="@+id/menuSO"-->
+<!--        android:icon="@drawable/ic_asset_so"-->
+<!--        android:title="AssetSO"-->
+<!--        app:showAsAction="always" />-->
+<!--    <item-->
+<!--        android:id="@+id/menuConfirm"-->
+<!--        android:icon="@drawable/ic_asset_confirm"-->
+<!--        android:title="ConfirmSO"-->
+<!--        app:showAsAction="always" />-->
+<!--    <item-->
+<!--        android:id="@+id/menuAsset"-->
+<!--        android:icon="@drawable/ic_all_asset"-->
+<!--        android:title="AllAsset"-->
+<!--        app:showAsAction="always" />-->
+
+</menu>
