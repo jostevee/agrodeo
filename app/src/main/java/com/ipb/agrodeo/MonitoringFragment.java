@@ -1,16 +1,15 @@
 package com.ipb.agrodeo;
 
+import static android.content.ContentValues.TAG;
+
+import android.Manifest;
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -19,19 +18,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Set;
 import java.util.UUID;
-
-import static android.content.ContentValues.TAG;
 
 public class MonitoringFragment extends Fragment {
 
@@ -113,7 +114,7 @@ public class MonitoringFragment extends Fragment {
         clearButton.setOnClickListener(this::onClickClear);
 
         setUiEnabled(false);
-         */
+        */
 
         // final Button buttonConnect = view.findViewById(R.id.buttonConnect);
         final Toolbar toolbar = view.findViewById(R.id.toolbar);
@@ -127,7 +128,7 @@ public class MonitoringFragment extends Fragment {
 
         // If a bluetooth device has been selected from SelectDeviceActivity
         deviceName = requireActivity().getIntent().getStringExtra("deviceName");
-        if (deviceName != null){
+        if (deviceName != null) {
             // Get the device address to make BT Connection
             deviceAddress = requireActivity().getIntent().getStringExtra("deviceAddress");
             // Show progree and connection status
@@ -135,13 +136,24 @@ public class MonitoringFragment extends Fragment {
             progressBar.setVisibility(View.VISIBLE);
             // buttonConnect.setEnabled(false);
 
+            if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+
             /*
             This is the most important piece of code. When "deviceName" is found
             the code will call a new thread to create a bluetooth connection to the
             selected device (see the thread code below)
              */
             BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-            createConnectThread = new CreateConnectThread(bluetoothAdapter,deviceAddress);
+            createConnectThread = new CreateConnectThread(bluetoothAdapter, deviceAddress);
             createConnectThread.start();
         }
 
@@ -150,10 +162,10 @@ public class MonitoringFragment extends Fragment {
          */
         handler = new Handler(Looper.getMainLooper()) {
             @Override
-            public void handleMessage(Message msg){
-                switch (msg.what){
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
                     case CONNECTING_STATUS:
-                        switch(msg.arg1){
+                        switch (msg.arg1) {
                             case 1:
                                 toolbar.setSubtitle("Connected to " + deviceName);
                                 progressBar.setVisibility(View.GONE);
@@ -170,7 +182,7 @@ public class MonitoringFragment extends Fragment {
 
                     case MESSAGE_READ:
                         String arduinoMsg = msg.obj.toString(); // Read message from Arduino
-                        switch (arduinoMsg.toLowerCase()){
+                        switch (arduinoMsg.toLowerCase()) {
                             case "led is turned on":
                                 imageView.setBackgroundColor(getResources().getColor(R.color.black));
                                 textViewInfo.setText("Arduino Message : " + arduinoMsg);
@@ -203,7 +215,7 @@ public class MonitoringFragment extends Fragment {
             public void onClick(View view) {
                 String cmdText = null;
                 String btnState = buttonToggle.getText().toString().toLowerCase();
-                switch (btnState){
+                switch (btnState) {
                     case "turn on":
                         buttonToggle.setText("Turn Off");
                         // Command to turn on LED on Arduino. Must match with the command in Arduino code
@@ -223,7 +235,8 @@ public class MonitoringFragment extends Fragment {
     }
 
     /* ============================ Thread to Create Bluetooth Connection =================================== */
-    public static class CreateConnectThread extends Thread {
+    public class CreateConnectThread extends Thread {
+        private static final int REQUEST_CODE = 999;
 
         public CreateConnectThread(BluetoothAdapter bluetoothAdapter, String address) {
             /*
@@ -232,6 +245,12 @@ public class MonitoringFragment extends Fragment {
              */
             BluetoothDevice bluetoothDevice = bluetoothAdapter.getRemoteDevice(address);
             BluetoothSocket tmp = null;
+            if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.BLUETOOTH)
+                    != PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(((Activity)getContext()),
+                        new String[]{Manifest.permission.BLUETOOTH}, REQUEST_CODE);
+            }
             UUID uuid = bluetoothDevice.getUuids()[0].getUuid();
 
             try {
@@ -252,6 +271,12 @@ public class MonitoringFragment extends Fragment {
         public void run() {
             // Cancel discovery because it otherwise slows down the connection.
             BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+            if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.BLUETOOTH)
+                    != PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(((Activity)getContext()),
+                        new String[]{Manifest.permission.BLUETOOTH}, REQUEST_CODE);
+            }
             bluetoothAdapter.cancelDiscovery();
             try {
                 // Connect to the remote device through the socket. This call blocks
