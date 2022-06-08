@@ -1,5 +1,9 @@
 package com.ipb.agrodeo;
 
+import static com.ipb.agrodeo.UploadMarketActivity.IMAGE_REQUEST_CODE;
+import static com.ipb.agrodeo.UploadMarketActivity.myMarketDataRef;
+import static com.ipb.agrodeo.UploadMarketActivity.myMarketStoreRef;
+
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -14,14 +18,6 @@ import android.view.MenuItem;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
-
-import java.util.Objects;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,9 +25,13 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
-import static com.ipb.agrodeo.UploadMarketActivity.IMAGE_REQUEST_CODE;
-import static com.ipb.agrodeo.UploadMarketActivity.myMarketDataRef;
-import static com.ipb.agrodeo.UploadMarketActivity.myMarketStoreRef;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
+import java.util.Objects;
 
 public class EditMarketActivity extends AppCompatActivity {
     String productKey, productName, productLocation, contactNumber, imageUrl;
